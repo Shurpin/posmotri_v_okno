@@ -10,12 +10,17 @@ html {
 
 .page {
   inline-size: 1200px;
-  block-size: 100%;
+  block-size: 800px; /*block-size: 100%; */
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 30px;
 }
 
 h1,
@@ -36,3 +41,249 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  inline-size: 1200px;
+  gap: 30px;
+}
+
+.result__video-container {
+  display: flex;
+  position: relative;
+  inline-size: 711px;
+  margin-block-end: 16px;
+  block-size: 386px;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 265px 252px 1fr;
+  block-size: 54px;
+}
+
+.search-form__fieldset {
+border: none;
+inline-size: 225px;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  padding-block-end: 5px;
+}
+
+.search-form__checkbox-list {
+  padding-block-end: 5px;
+  inline-size: 212px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-form__label {
+  display: flex;
+  font-weight: 400;
+  flex-direction: row;
+  block-size: 27px;
+}
+.search-form__checkbox {
+
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  block-size: 19px;
+  inline-size: 19px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  margin-inline-end: 5px;
+}
+
+.search-form__label-text {
+
+}
+
+input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
+  display: flex;
+  block-size: 15px;
+  content: "";
+  background-color: #ffffff;
+  inline-size: 15px;
+}
+
+
+.search-form__label:active:has(:focus-visible) { 
+  outline: none; 
+  border-left: 1px solid #fff; 
+  border-right: 1px solid #fff; 
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+  color: #FFF;
+}
+
+
+
+.search-form__label-text {
+
+}
+
+.search-form__textfield {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  inline-size: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  border-block: 1px solid rgba(255, 255, 255, 0.70);
+  border-inline: none;
+  padding-block-start: 3px;
+  letter-spacing: -0.18px;
+}
+
+
+
+.button {
+  background-color: transparent;
+  color: #FFF;
+  border: 1px solid #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  inline-size: 194px;
+  block-size: 34px;
+  margin-block-start: 20px;
+}
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+
+ 
+.search-form__submit-button:focus-visible {
+  outline: 15px solid lightpink;
+  color: white;
+}
+
+.content__details {
+inline-size: 100%;
+block-size: 534px;
+}
+
+.title {
+padding-block-end: 26px;
+font-family: Oswald;
+font-size: 75px;
+font-weight: 700;
+line-height: 94%;
+text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  block-size: 298px;
+  inline-size: 399px;
+  overflow: scroll;
+  gap: 30px;
+  position: relative;
+}
+
+.content__list-item {
+
+}
+
+.more-button {
+  inline-size: 100%;
+  block-size: 34px;
+}
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.content__video-card-description-container {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__card-link_current {
+
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+  padding-block-start: 3px;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26.2px; /* 90% */
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.pixel-perfect-image {
+  position: absolute;
+  width: 1200px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
